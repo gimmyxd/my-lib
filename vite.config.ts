@@ -14,13 +14,14 @@ export default defineConfig({
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ['react', 'styled-components'],
+      external: ['react', 'styled-components', "react-query"],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
-          react: 'React',
+          react: 'react',
           'styled-components': 'styled-components',
+          'react-query': 'react-query'
         },
       },
     },
